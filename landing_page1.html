@@ -36,10 +36,6 @@ body {
   color: white;
   text-align:center;
   padding: 10px;
-  position:relative;
-  animation-name: color;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
 }
 
 .menu ul {
@@ -53,11 +49,14 @@ body {
   margin-bottom: 10px;
   background-color: black;
   color: black;
+}
+.header, .menu li, .footer {
   position:relative;
   animation-name: color;
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+	
 @keyframes color {
   0%   {background-color:black;}
   25%  {background-color:grey;}
@@ -73,6 +72,11 @@ body {
 .menu li:hover {
   background-color: lightgrey;
 }
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+	
 form {
     display: flex;
     flex-direction: column;
@@ -101,7 +105,11 @@ form {
     width: 50px;
     height: 50px;
 }
-
+#arrow{
+  display:flex;
+  float:right;
+}
+	
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
@@ -160,6 +168,8 @@ form {
 
 <div class="col-9 col-s-7">
 
+<img class="responsive" src="\Company\images\welcome.jpg" alt="logo" >
+	
 <section id="about">
   <h2>About Us</h2>
   <hr>
@@ -232,7 +242,7 @@ form {
 	<li><a href="https://facebook.com" target="_blank"><img src="\Company\images\face.png" alt="facebook logo" width="40px" height="40px" ></a></li>
       </ul>
 	
-    <li><a href="#home"><img src="\Company\images\arrow.png" alt="top arrow" width="40px" height="40px" ></a></li> 
+    <li><a href="#home"><img id="arrow" src="\Company\images\arrow.png" alt="top arrow" width="40px" height="40px" ></a></li> 
     <p>&copy; 2024 AR Solutions. All rights reserved.</p>
   </div>  
 </footer>
